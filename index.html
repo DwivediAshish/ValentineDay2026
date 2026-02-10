@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Be My Valentine?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Work+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="hero" aria-live="polite">
+      <div class="card">
+        <p class="kicker">February 14</p>
+        <h1>Will you be my Valentine?</h1>
+        <p class="sub">
+          I made this little page to ask the most important question of the day.
+        </p>
+
+        <div class="actions">
+          <button id="yesBtn" class="btn yes">Yes!</button>
+          <button id="maybeBtn" class="btn maybe" aria-describedby="hint">
+            Hmm... maybe
+          </button>
+        </div>
+
+        <p id="hint" class="hint">
+          Hint: the "Yes" button is extremely friendly.
+        </p>
+        <p id="response" class="response" role="status"></p>
+      </div>
+    </main>
+
+    <div class="hearts" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
