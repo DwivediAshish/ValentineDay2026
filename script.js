@@ -23,19 +23,22 @@ yesBtn.addEventListener("click", () => {
 
 maybeBtn.addEventListener("click", () => {
   const nudges = [
-    "Tell me yes?",
-    "Pretty please?",
-    "I can bring chocolates.",
-    "I can bring flowers.",
+    "Seriously? So you wanna ditch your kadhi chawal?",
+    "And for what? Some Bengali boys?",
+    "I hope you are ready for some drama",
+    "Ab itne bhi bhaav mat kha... Haan bol de ab.",
   ];
 
   maybeClicks += 1;
-  if (maybeClicks >= 3) {
+  if (maybeClicks >= 4) {
     yesBtn.focus();
-    setMessage("The answer is in the big pink button.");
+    setMessage("Okay Anuja, I’m waiting…");
     return;
   }
 
   const nudge = nudges[(maybeClicks - 1) % nudges.length];
   setMessage(nudge);
+  maybeBtn.classList.remove("wiggle");
+  void maybeBtn.offsetWidth;
+  maybeBtn.classList.add("wiggle");
 });
